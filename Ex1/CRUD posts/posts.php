@@ -32,8 +32,8 @@
 </head>
 <body>
     <div class="container">
-        <h3 class="text-center">--- CATEGORIES ---</h3>
-        <a href="posts.php" class="btn btn-primary">Add New Category</a>
+        <h3 class="text-center">--- posts ---</h3>
+        <a href="post_add.php" class="btn btn-primary">Add New post</a>
         <table class="table">
             <thead>
                 <th>ID</th>
