@@ -31,7 +31,7 @@ $detail=$post;
 <body>
     <div class="container">
         <h3 class="text-center">--- CATEGORIES ---</h3>
-        <a href="posts.php" class="btn btn-primary">Add New posts</a>
+        <a href="posts.php" class="btn btn-primary"> posts</a>
         <table class="table">
             <thead>
                 <th>ID</th>
@@ -51,8 +51,8 @@ $detail=$post;
                 <td><?= $post['content'] ?></td>
                 <td>
                     <a href="post.php?id=<?= $post['id'] ?>" class="btn btn-primary">Detail</a>
-                    <a href="category_edit.php?slug=<?= $category['slug'] ?>" class="btn btn-success">Edit</a>
-                    <a href="category_delete.php?slug=<?= $category['slug'] ?>" class="btn btn-danger">Delete</a>
+                    <a href="post.php?slug=<?= $category['slug'] ?>" class="btn btn-success">Edit</a>
+                    <a href="post_delete.php?slug=<?= $category['slug'] ?>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
         

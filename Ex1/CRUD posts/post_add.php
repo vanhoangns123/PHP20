@@ -1,15 +1,15 @@
 <?php 
     require_once('connect.php');
 
-    $query = "SELECT * FROM posts WHERE parent_id is NULL";
+    // $query = "INSERT INTO posts (id,title,thumbnail,description) VALUES ('".$data['id']."','".$data['title']."','".$file_name."','".$data['description']."')";
 
-    $result = $conn->query($query);
+    // $result = $conn->query($query);
 
-    $categories = array();
+    // $posts = array();
 
-    while ($row = $result->fetch_assoc()) {
-       $categories[] = $row;
-    }
+    // while ($row = $result->fetch_assoc()) {
+    //    $posts[] = $row;
+    // }
 
 ?>
 
@@ -35,26 +35,36 @@
     <h3 align="center">Add New post</h3>
     <hr>
         <form action="post_add_process.php" method="POST" role="form" enctype="multipart/form-data">
+           
             <div class="form-group">
                 <label for="">id</label>
-                <input type="text" class="form-control" id="" placeholder="" name="id" >
+                <input type="text" class="form-control" id="" placeholder="" name="id">
             </div>
             <div class="form-group">
                 <label for="">title</label>
-                <input type="file" class="form-control" id="" placeholder="" name="title">
+                <input type="text" class="form-control" id="" placeholder="" name="title">
+            </div>
+
+             <div class="form-group">
+                <label for="">description</label>
+                <input type="text" class="form-control" id="slug" placeholder="" name="description">
             </div>
             <div class="form-group">
-                <label for="">description  </label>
-                <select class="form-control" id="" placeholder="" name="description">
+                <label for="">thumenal  </label>
+                    <input type="file" class="form-control" id="" placeholder="" name="thumbnail">
+
+    
+
+               <!--  <select class="form-control" id="" placeholder="" name="description">
                     <option value="0">Danh muc cha</option>
                 <?php foreach ($posts as $post) {?>
                     <option value="<?= $post['id'] ?>"><?= $post['name'] ?></option>
                 <?php } ?>
-                </select>
+                </select> -->
             </div>
             <div class="form-group">
                 <label for="">content</label>
-                <input type="text" class="form-control" id="slug" placeholder="" name="content">
+                <input type="text" class="form-control" id="" placeholder="" name="content" >
             </div>
            
             <button type="submit" class="btn btn-primary">Create</button>

@@ -53,7 +53,7 @@
                 <td><?= $post['content'] ?></td>
                 <td>
                     <a href="post.php?id=<?= $post['id'] ?>" class="btn btn-primary">Detail</a>
-                    <a href="category_edit.php?slug=<?= $category['slug'] ?>" class="btn btn-success">Edit</a>
+                    <a href="post_edit.php?id=<?= $post['id'] ?>" class="btn btn-success">Edit</a>
                     <a href="post_delete.php?id=<?= $post['id'] ?>" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
