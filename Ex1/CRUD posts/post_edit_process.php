@@ -7,7 +7,7 @@
 
     $target_file = $target_dir . basename($_FILES["thumbnail"]["name"]); // link sẽ upload file lên
    
-    if (move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file)) {
+    // if (move_uploaded_file($_FILES["thumbnail"]["tmp_name"], $target_file)) {
      	// nếu upload file không có lỗi 
      	$file_name = basename($_FILES["thumbnail"]["name"]);
 
@@ -28,9 +28,6 @@
     //   }else{
     //     $query = "UPDATE posts SET name = '".$data['name']."',slug = '".$data['slug']."',description = '".$data['description']."' WHERE id = ".$data['id'];
     //   }
-
-    }
-
     $status = $conn->query($query);
     echo "$query";
     if($status == TRUE){
@@ -38,5 +35,10 @@
     }else{
       echo "Error";
     }
+    // }
+
+  
+    
+    
 
  ?>
