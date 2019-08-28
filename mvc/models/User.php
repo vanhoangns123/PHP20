@@ -14,18 +14,13 @@ class User{
 		}
 		return $users;
 	}
-	function get1(){
-		$id=$_GET['id'];
+	function get1($id){
 		$conn_obj= new Connection();
 		$query = "select * from users where id='".$id."' ";
-		echo $query;
+		//echo $query;
 		$result=$conn_obj->conn->query($query);
-		$users=array();
-		while($row=$result->fetch_assoc()){
-			$users[]=$row;
-
-		}
-		return $users;
+		$user= $result->fetch_assoc();
+		return $user;
 
 	}
 }

@@ -11,12 +11,10 @@ class UserController{
 		require_once('views/user/list.php');
 
 	}
-	function detail(){
+	function detail($id){
 		$user_obj=new User();
-		$users=$user_obj->get1();
-		require_once('views/user/list.php');
-
-
+		$user=$user_obj->get1($id);
+		require_once('views/user/detail.php');
 	}
 }
  ?>

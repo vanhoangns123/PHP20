@@ -28,7 +28,7 @@
                 <th>creat_at</th>
 
             </thead>
-            <?php foreach ($users as $user) {?>
+            <?php foreach($users as $user) { ?>
             <tr>
                 <td><?= $user['id'] ?></td>
                 <td><?= $user['name'] ?></td>
@@ -37,9 +37,9 @@
                 
                 <td><?= $user['created_at'] ?></td>
                 <td>
-                    <a href="models/User.php?id=<?= $user['id'] ?>" class="btn btn-primary">Detail</a>
-                    <a href="post_edit.php?id=<?= $user['id'] ?>" class="btn btn-success">Edit</a>
-                    <a href="post_delete.php?id=<?= $user['id'] ?>" class="btn btn-danger">Delete</a>
+                    <a href="index.php?mod=user&&act=detail&&id=<?= $user['id']?>" class="btn btn-primary">Detail</a>
+                    <a href="#" class="btn btn-success">Edit</a>
+                    <a href="#" class="btn btn-danger">Delete</a>
                 </td>
             </tr>
             <?php } ?>
